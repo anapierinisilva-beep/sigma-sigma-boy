@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#f8edf5">
+<title>Persona • Lucas Mendes</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+:root{--ink:#343044;--muted:#777286;--pink:#f2c8dc;--pink2:#fff0f6;--lilac:#dcd3f7;--blue:#d4e8f8;--mint:#d8eee4;--cream:#fffaf2;--white:#fffdfd;--line:#eee5ef;--shadow:0 18px 45px rgba(79,57,91,.09)}
+*{box-sizing:border-box;scroll-behavior:smooth}
+body{margin:0;background:#fcf9fc;color:var(--ink);font-family:'DM Sans',sans-serif;line-height:1.65}
+body:before{content:"";position:fixed;inset:0;z-index:-1;background:radial-gradient(circle at 8% 8%,#fce8f2 0,transparent 27%),radial-gradient(circle at 92% 30%,#e9e5fb 0,transparent 25%),radial-gradient(circle at 20% 90%,#e4f3ee 0,transparent 26%)}
+a{color:inherit;text-decoration:none}
+.wrap{width:min(1120px,92%);margin:auto}
+nav{position:sticky;top:0;z-index:20;background:#fcf9f2d9;backdrop-filter:blur(14px);border-bottom:1px solid #eee5ef}
+.navinner{display:flex;align-items:center;justify-content:space-between;gap:18px;padding:14px 0}
+.brand{font-weight:700;letter-spacing:-.5px;display:flex;align-items:center;gap:10px}
+.brandmark{width:35px;height:35px;border-radius:12px;background:linear-gradient(135deg,var(--pink),var(--lilac));display:grid;place-items:center;font-size:18px}
+.links{display:flex;gap:20px;flex-wrap:wrap;font-size:.86rem;color:#696276}
+.links a:hover{color:#b05b88}
+.hero{padding:76px 0 52px;display:grid;grid-template-columns:1.15fr .85fr;gap:45px;align-items:center}
+.eyebrow{display:inline-flex;gap:8px;align-items:center;padding:7px 13px;border-radius:30px;background:#fff0f6;color:#a65e85;font-size:.8rem;font-weight:700;letter-spacing:.04em}
+h1,h2,h3,p{margin-top:0}
+h1{font:700 clamp(2.7rem,6vw,5rem)/1.04 'Playfair Display',serif;letter-spacing:-1.8px;margin:22px 0}
+h1 span{color:#bd7ba0}
+.lead{font-size:1.08rem;color:var(--muted);max-width:600px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:26px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 18px;border-radius:15px;font-weight:700;font-size:.9rem;transition:.2s}
+.btn.primary{background:var(--ink);color:white;box-shadow:0 8px 20px #34304425}.btn.soft{background:white;border:1px solid var(--line)}
+.btn:hover{transform:translateY(-2px)}
+.profile-art{position:relative;min-height:390px;display:grid;place-items:center}
+.blob{position:absolute;width:290px;height:290px;background:linear-gradient(140deg,#f5d6e6,#dcd4f8 75%);border-radius:43% 57% 57% 43% / 43% 42% 58% 57%;transform:rotate(-9deg)}
+.profile-card{position:relative;width:min(310px,90%);padding:25px;background:#ffffffd9;border:1px solid #fff;border-radius:28px;box-shadow:var(--shadow);text-align:center}
+.avatar{width:112px;height:112px;margin:0 auto 15px;border-radius:35px;background:linear-gradient(135deg,#e5dcfb,#f8d7e7);display:grid;place-items:center;font-size:55px;box-shadow:inset 0 0 0 7px #ffffff70}
+.profile-card h2{font:700 1.8rem 'Playfair Display',serif;margin-bottom:2px}
+.profile-card p{color:var(--muted);font-size:.88rem;margin-bottom:15px}
+.tags{display:flex;justify-content:center;gap:7px;flex-wrap:wrap}
+.tag{background:#f8f3fb;padding:5px 10px;border-radius:30px;font-size:.74rem;color:#756984}
+.float{position:absolute;padding:11px 14px;border-radius:15px;background:white;box-shadow:var(--shadow);font-size:.82rem;font-weight:700}
+.f1{top:34px;right:0;background:#fff2f7}.f2{bottom:42px;left:0;background:#eff8f3}
+section{padding:54px 0}
+.section-head{max-width:700px;margin-bottom:27px}
+.kicker{color:#b46c91;font-size:.77rem;letter-spacing:.15em;font-weight:700;text-transform:uppercase}
+h2.section-title{font:700 clamp(2rem,4vw,3rem)/1.15 'Playfair Display',serif;margin:8px 0 12px}
+.section-head p{color:var(--muted)}
+.grid{display:grid;gap:18px}
+.grid.three{grid-template-columns:repeat(3,1fr)}
+.grid.two{grid-template-columns:repeat(2,1fr)}
+.card{background:#ffffffd9;border:1px solid #eee6f0;border-radius:23px;padding:24px;box-shadow:0 8px 28px #46365208}
+.card h3{font-size:1.05rem;margin:12px 0 8px}
+.card p{font-size:.92rem;color:var(--muted);margin-bottom:0}
+.iconbox{width:46px;height:46px;border-radius:15px;display:grid;place-items:center;font-size:22px}
+.pink{background:var(--pink2)}.lilac{background:#f1edff}.blue{background:#edf7ff}.mint{background:#edf8f2}.cream{background:#fff6e8}
+.quote{padding:30px;border-radius:25px;background:linear-gradient(120deg,#fff0f6,#f1edff);border:1px solid white;position:relative}
+.quote-mark{font:700 4rem 'Playfair Display';color:#c38cac;line-height:.8}
+.quote blockquote{font:600 clamp(1.2rem,2.5vw,1.7rem)/1.5 'Playfair Display',serif;margin:10px 0 12px}
+.quote small{color:var(--muted)}
+.timeline{display:grid;gap:14px}
+.time-row{display:grid;grid-template-columns:115px 1fr;gap:16px;align-items:stretch}
+.time{border-radius:18px;background:#f3edff;display:flex;align-items:center;justify-content:center;text-align:center;padding:15px;font-weight:700;color:#76639a;font-size:.9rem}
+.time-row:nth-child(2) .time{background:#fff0f6;color:#aa6788}.time-row:nth-child(3) .time{background:#edf8f2;color:#5d9279}.time-row:nth-child(4) .time{background:#edf7ff;color:#5d88a8}.time-row:nth-child(5) .time{background:#fff6e8;color:#a17b49}
+.time-content{padding:17px 20px;background:white;border:1px solid var(--line);border-radius:18px}
+.time-content h3{margin:0 0 4px;font-size:1rem}.time-content p{margin:0;color:var(--muted);font-size:.9rem}
+.notice{margin-top:18px;padding:16px 18px;border-radius:17px;background:#fff8ed;color:#8a704d;font-size:.9rem}
+.pain-card{border-top:4px solid var(--pink)}.pain-card:nth-child(2){border-color:var(--lilac)}.pain-card:nth-child(3){border-color:var(--blue)}
+.steps{counter-reset:step;display:grid;gap:13px}
+.step{display:grid;grid-template-columns:48px 1fr;gap:15px;align-items:start;padding:18px;background:#fff;border:1px solid var(--line);border-radius:19px}
+.stepnum{width:42px;height:42px;border-radius:14px;background:#f2edff;display:grid;place-items:center;font-weight:700;color:#8068ad}
+.step h3{margin:0 0 4px}.step p{margin:0;color:var(--muted);font-size:.91rem}
+.solution{background:linear-gradient(140deg,#edf8f2,#f3efff 70%,#fff0f6);border:1px solid white;border-radius:28px;padding:clamp(22px,4vw,38px)}
+.solution-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center}
+.appchips{display:flex;gap:10px;flex-wrap:wrap;margin-top:18px}
+.appchip{background:white;border:1px solid #e7e1ef;padding:10px 13px;border-radius:15px;font-size:.87rem;font-weight:700}
+.checklist{display:grid;gap:12px;margin-top:14px}
+.check{display:flex;gap:10px;align-items:flex-start;color:#5f5b6d;font-size:.92rem}
+.check span{width:23px;height:23px;flex:0 0 23px;border-radius:8px;background:#fff;display:grid;place-items:center;color:#6d9a82}
+.reflection{padding:32px;border-radius:25px;background:var(--ink);color:white}
+.reflection h2{font:700 2rem 'Playfair Display',serif}.reflection p{color:#ded9e8}
+.reflection strong{color:#f7cfe2}
+footer{padding:28px 0 40px;text-align:center;color:#8b8496;font-size:.82rem}
+.footerline{height:1px;background:var(--line);margin-bottom:22px}
+@media(max-width:800px){.hero{grid-template-columns:1fr;padding-top:48px;gap:10px}.profile-art{min-height:350px}.grid.three{grid-template-columns:1fr}.grid.two,.solution-grid{grid-template-columns:1fr}.links{gap:11px;font-size:.78rem}.navinner{align-items:flex-start}.brand{font-size:.9rem}.time-row{grid-template-columns:88px 1fr}.time{font-size:.78rem;padding:10px 5px}.card{padding:21px}}
+@media(max-width:420px){.links a:nth-child(2){display:none}.hero{padding-top:35px}.profile-art{min-height:320px}.blob{width:250px;height:250px}.float{font-size:.72rem}.time-row{grid-template-columns:1fr;gap:6px}.time{justify-content:flex-start;padding:9px 13px}.navinner{flex-wrap:wrap}.links{width:100%;justify-content:space-between}}
+</style>
+</head>
+<body>
+<nav>
+  <div class="wrap navinner">
+    <a class="brand" href="#inicio"><span class="brandmark">✿</span> Persona em foco</a>
+    <div class="links">
+      <a href="#perfil">Perfil</a><a href="#rotina">Rotina</a><a href="#desafios">Desafios</a><a href="#solucoes">Soluções</a>
+    </div>
+  </div>
+</nav>
+<main>
+  <header class="wrap hero" id="inicio">
+    <div>
+      <span class="eyebrow">✦ PROJETO ESCOLAR · PERSONA</span>
+      <h1>Por trás do <span>“não estou nem aí”</span></h1>
+      <p class="lead">Conheça Lucas Mendes e entenda como a falta de interesse nos estudos pode esconder dificuldades de aprendizagem, vergonha de perguntar e uma rotina cheia de desafios.</p>
+      <div class="hero-actions">
+        <a class="btn primary" href="#perfil">Conhecer o Lucas <span>↗</span></a>
+        <a class="btn soft" href="#solucoes">Ver ideias de solução ♡</a>
+      </div>
+    </div>
+    <div class="profile-art" aria-label="Cartão ilustrativo do perfil de Lucas">
+      <div class="blob"></div>
+      <span class="float f1">✦ Aprende fazendo</span>
+      <span class="float f2">♡ Precisa de apoio</span>
+      <article class="profile-card">
+        <div class="avatar" aria-hidden="true">🧑🏻‍🎓</div>
+        <h2>Lucas Mendes</h2>
+        <p>15 anos · 1º ano do Ensino Médio</p>
+        <div class="tags"><span class="tag">Criativo</span><span class="tag">Curioso</span><span class="tag">Distraído</span></div>
+      </article>
+    </div>
+  </header>
+
+  <section class="wrap" id="perfil">
+    <div class="section-head">
+      <span class="kicker">01 · Quem é essa persona?</span>
+      <h2 class="section-title">Um aluno que quer conseguir — mas não sabe por onde começar.</h2>
+      <p>Lucas estuda em uma escola pública na periferia de uma grande cidade e mora com a mãe e a irmã mais nova. Gosta de jogos no celular, vídeos curtos e edições simples de vídeo. Tem facilidade com assuntos práticos, mas apresenta lacunas em Matemática e Português.</p>
+    </div>
+    <div class="quote">
+      <div class="quote-mark">“</div>
+      <blockquote>Eu até quero ir bem, mas na hora da aula parece que estou ouvindo outra língua e acabo me distraindo com qualquer coisa.</blockquote>
+      <small>— Lucas Mendes, frase que representa sua experiência</small>
+    </div>
+    <div class="grid three" style="margin-top:18px">
+      <article class="card"><div class="iconbox pink">🎮</div><h3>Interesses</h3><p>Jogos online, vídeos curtos e criação de edições no celular — atividades em que recebe estímulos rápidos e pode experimentar.</p></article>
+      <article class="card"><div class="iconbox lilac">💡</div><h3>Potencial</h3><p>É inteligente e criativo, especialmente quando consegue relacionar o conteúdo com situações práticas e temas de que gosta.</p></article>
+      <article class="card"><div class="iconbox blue">🌱</div><h3>O que precisa</h3><p>Explicações em etapas, apoio sem julgamento, recuperação de conteúdos básicos e atividades que façam sentido para sua vida.</p></article>
+    </div>
+  </section>
+
+  <section class="wrap" id="rotina">
+    <div class="section-head">
+      <span class="kicker">02 · Um dia na vida dele</span>
+      <h2 class="section-title">A rotina também influencia a aprendizagem.</h2>
+      <p>Entre o cansaço, as responsabilidades em casa e a dificuldade para começar as tarefas, Lucas encontra poucos momentos tranquilos para estudar.</p>
+    </div>
+    <div class="timeline">
+      <div class="time-row"><div class="time">06h–07h</div><div class="time-content"><h3>Começa o dia cansado ☀️</h3><p>Vai para a escola depois de ficar no celular até tarde e, muitas vezes, sem tomar um café da manhã reforçado.</p></div></div>
+      <div class="time-row"><div class="time">07h30–12h</div><div class="time-content"><h3>Durante as aulas 📚</h3><p>Tenta acompanhar, mas perde a explicação quando faltam conhecimentos anteriores. Para disfarçar, desenha ou olha o celular.</p></div></div>
+      <div class="time-row"><div class="time">12h30–14h</div><div class="time-content"><h3>Responsabilidades em casa 🏡</h3><p>Almoça e cuida da irmã mais nova até a mãe chegar do trabalho.</p></div></div>
+      <div class="time-row"><div class="time">14h–18h</div><div class="time-content"><h3>A tarefa parece impossível ✏️</h3><p>Trava no primeiro exercício e, sem alguém disponível para tirar dúvidas, acaba recorrendo aos jogos e às redes sociais.</p></div></div>
+      <div class="time-row"><div class="time">19h–23h</div><div class="time-content"><h3>Cobrança e frustração 🌙</h3><p>As conversas sobre notas viram discussões. Lucas se fecha, sente culpa e fica ainda mais desmotivado.</p></div></div>
+    </div>
+    <div class="notice">♡ Importante: a rotina é uma representação da persona, não uma explicação única para o desinteresse. Cada estudante pode enfrentar dificuldades diferentes.</div>
+  </section>
+
+  <section class="wrap" id="desafios">
+    <div class="section-head">
+      <span class="kicker">03 · Dores e obstáculos</span>
+      <h2 class="section-title">O que existe por trás da distração?</h2>
+      <p>O comportamento de Lucas pode ser um jeito de evitar a frustração. Em vez de mostrar que não entendeu, ele tenta esconder a dificuldade.</p>
+    </div>
+    <div class="grid three">
+      <article class="card pain-card"><div class="iconbox pink">🫣</div><h3>Medo de ser julgado</h3><p>Tem vergonha de fazer perguntas e receio de que os colegas riam de suas dúvidas ou o considerem incapaz.</p></article>
+      <article class="card pain-card"><div class="iconbox lilac">🧩</div><h3>Lacunas de aprendizagem</h3><p>Quando não entende os conceitos básicos, conteúdos novos parecem confusos e difíceis de acompanhar.</p></article>
+      <article class="card pain-card"><div class="iconbox blue">🏠</div><h3>Pouco apoio para estudar</h3><p>Nem sempre tem um espaço silencioso ou alguém com tempo para explicar as tarefas com paciência.</p></article>
+      <article class="card pain-card"><div class="iconbox cream">⏳</div><h3>Recompensas rápidas</h3><p>Vídeos e jogos oferecem estímulos imediatos, enquanto algumas atividades escolares parecem lentas ou distantes de seus interesses.</p></article>
+      <article class="card pain-card"><div class="iconbox mint">💬</div><h3>Conflitos em casa</h3><p>Cobranças constantes sobre cadernos e notas aumentam o estresse e dificultam conversas abertas sobre o que ele precisa.</p></article>
+      <article class="card pain-card"><div class="iconbox pink">📝</div><h3>Ansiedade nas provas</h3><p>Estuda em cima da hora, tenta decorar o conteúdo e pode ficar nervoso durante a avaliação, reforçando a sensação de fracasso.</p></article>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <div class="section-head">
+      <span class="kicker">04 · Quando aparece?</span>
+      <h2 class="section-title">O ciclo que mantém o problema.</h2>
+    </div>
+    <div class="steps">
+      <article class="step"><div class="stepnum">01</div><div><h3>O conteúdo começa</h3><p>O professor explica um assunto novo, mas Lucas não domina parte dos conceitos anteriores e logo se perde.</p></div></article>
+      <article class="step"><div class="stepnum">02</div><div><h3>Ele tenta fazer a atividade</h3><p>Não sabe como começar o primeiro exercício e sente vergonha de pedir ajuda.</p></div></article>
+      <article class="step"><div class="stepnum">03</div><div><h3>A distração vira uma saída</h3><p>Conversa, desenha ou acessa o celular para fugir da sensação desconfortável de não entender.</p></div></article>
+      <article class="step"><div class="stepnum">04</div><div><h3>A nota baixa aumenta a frustração</h3><p>Com medo da próxima avaliação, tenta estudar na última hora e passa a acreditar que não é capaz — mesmo podendo aprender com o apoio adequado.</p></div></article>
+    </div>
+  </section>
+
+  <section class="wrap" id="solucoes">
+    <div class="solution">
+      <div class="solution-grid">
+        <div>
+          <span class="kicker">05 · Possíveis soluções digitais</span>
+          <h2 class="section-title">Aprender em pequenas conquistas. ✨</h2>
+          <p style="color:var(--muted)">Plataformas gamificadas e microlearning podem dividir conteúdos em etapas curtas, com desafios, metas possíveis e retorno rápido sobre o progresso.</p>
+          <div class="appchips"><span class="appchip">🎯 Kahoot!</span><span class="appchip">🌱 Duolingo</span><span class="appchip">📱 Microlearning</span></div>
+        </div>
+        <div>
+          <h3>Como isso poderia ajudar Lucas?</h3>
+          <div class="checklist">
+            <div class="check"><span>✓</span><div><strong>Desafios curtos</strong><br>Questões rápidas para revisar um conceito de cada vez.</div></div>
+            <div class="check"><span>✓</span><div><strong>Feedback imediato</strong><br>Entender o erro e tentar novamente sem se sentir exposto.</div></div>
+            <div class="check"><span>✓</span><div><strong>Metas alcançáveis</strong><br>Reconhecer o progresso e construir confiança aos poucos.</div></div>
+            <div class="check"><span>✓</span><div><strong>Conexão com a vida real</strong><br>Usar exemplos de jogos, vídeos e situações do cotidiano.</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="grid two" style="margin-top:18px">
+      <article class="card"><div class="iconbox mint">👩‍🏫</div><h3>O papel da escola</h3><p>Identificar lacunas, oferecer atividades de recuperação, variar as estratégias de ensino e criar um ambiente em que perguntar seja seguro.</p></article>
+      <article class="card"><div class="iconbox pink">🤝</div><h3>O papel da família</h3><p>Conversar sem humilhar ou comparar, combinar uma rotina realista e reconhecer esforço e progresso — não apenas as notas.</p></article>
+    </div>
+  </section>
+
+  <section class="wrap">
+    <div class="reflection">
+      <span class="kicker" style="color:#f4bfd8">PARA REFLETIR</span>
+      <h2>Desinteresse nem sempre significa falta de vontade.</h2>
+      <p>Às vezes, o aluno se afasta porque está perdido, cansado ou com medo de errar. Mais do que cobrar atenção, é importante descobrir <strong>o que está dificultando a aprendizagem</strong> e oferecer caminhos para que ele volte a acreditar em si mesmo.</p>
+      <p style="margin-bottom:0">✨ <strong>O objetivo não é rotular Lucas, mas compreender sua realidade e pensar em formas de apoiá-lo.</strong></p>
+    </div>
+  </section>
+</main>
+<footer>
+  <div class="wrap"><div class="footerline"></div>Projeto escolar · Persona: Lucas Mendes<br><span>Feito com cuidado, empatia e tons pastel ♡</span></div>
+</footer>
+</body>
+</html>
